@@ -124,8 +124,56 @@ atom-text-editor .search-results .marker.current-result .region {
 }
 
 .syntax--invalid.syntax--illegal {
-  background-color: @red;
-  color: @syntax-background-color;
+  animation: 5s error;
+  animation-fill-mode: forwards;
+  background-color: transparent;
+
+  &::before{
+    left: 0px;
+    position: absolute;
+    font-family: 'ios-infinity';
+    content: "\e8a7";
+    color: @celer-important-90;
+    opacity: 0;
+    animation: 5s fadeIn;
+    animation-fill-mode: forwards;
+  }
+
+  &:hover::after{
+    position: absolute;
+    left: 1px;
+    margin-top: 25px;
+    content: "invalid syntax";
+    background-color: @celer-black-90;
+    color: @celer-white;
+    font-size: 10px;
+    border: 1px solid @celer-white;
+    padding: 5px 10px;
+
+    // transition: opacity 2s;
+    // opacity: 1;
+  }
+
+
+}
+
+@keyframes error {
+  90% {
+    color: @syntax-text-color;;
+  }
+  100% {
+    text-decoration: underline;
+    color: @celer-important-90;;
+  }
+}
+
+@keyframes fadeIn {
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .syntax--string {

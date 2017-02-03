@@ -7,7 +7,11 @@
 
 .icon[data-name$=".less"],
 .icon[data-name$=".css"] {
-  color: #add47f;
+  color: @blue;
+}
+
+.icon[data-name$=".scss"] {
+  color: lighten(#c6538c, 5%);
 }
 
 .icon[data-name$=".less"]::before {
@@ -20,11 +24,28 @@
   display: none;
 }
 
-li.status-added::before{
-  display: block!important;
-    background: #2bda77!important;
-  }
+// li.status-added::before{
+//   display: block!important;
+//     background: #2bda77!important;
+//   }
 
-li.status-added .icon{
+li.status-added > .icon{
     color: #2bda77!important;
   }
+
+// TO-DO styling
+.syntax--note,
+.syntax--todo,
+.syntax--fixme{
+  color: @blue;
+  padding: 5px 10px;
+  font-style:italic;
+  &::before, &::after{
+    content: ' ** ';
+  }
+}
+
+.syntax--fixme{
+  color: @celer-important-80;
+
+}
