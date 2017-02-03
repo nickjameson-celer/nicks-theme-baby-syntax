@@ -4,10 +4,10 @@
 // include a syntax-variables.less file.
 
 // General colors
-@syntax-text-color: @very-light-gray;
-@syntax-cursor-color: white;
+@syntax-text-color: @celer-black-30;
+@syntax-cursor-color: @celer-success-100;
 @syntax-selection-color: lighten(@dark-gray, 10%);
-@syntax-background-color: @very-dark-gray;
+@syntax-background-color: @celer-black-90;
 
 // Guide colors
 @syntax-wrap-guide-color: @dark-gray;
@@ -19,13 +19,13 @@
 @syntax-result-marker-color-selected: white;
 
 // Gutter colors
-@syntax-gutter-text-color: @very-light-gray;
-@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
-@syntax-gutter-background-color: @dark-gray;
+@syntax-gutter-text-color: @celer-black-65;
+@syntax-gutter-text-color-selected: @celer-black-30;
+@syntax-gutter-background-color: @syntax-background-color;
 @syntax-gutter-background-color-selected: @gray;
 
 // For git diff info. i.e. in the gutter
-@syntax-color-renamed: @blue;
-@syntax-color-added: @green;
-@syntax-color-modified: @orange;
-@syntax-color-removed: @red;
+@syntax-color-renamed: @celer-information-80;
+@syntax-color-added: @celer-success-80;
+@syntax-color-modified: @celer-warning-80;
+@syntax-color-removed: @celer-important-80;
